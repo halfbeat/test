@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema targetNamespace="http://www.jcyl.es/cs/VariableGroup"
+	elementFormDefault="qualified" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:vg="http://www.jcyl.es/cs/VariableGroup">
+
+    <complexType name="Variable">
+    	<sequence>
+    		<element name="child" type="vg:Variable" minOccurs="0" maxOccurs="unbounded"></element>
+    	</sequence>
+    	<attribute name="name" type="string" use="required"/>
+    	<attribute name="type" type="vg:VariableType" use="required"/>
+    </complexType>
+
+    <simpleType name="VariableType">
+    	<restriction base="string">
+    		<enumeration value="vt_int"></enumeration>
+    		<enumeration value="vt_uint"></enumeration>
+    		<enumeration value="vt_long"></enumeration>
+    		<enumeration value="vt_ulong"></enumeration>
+    		<enumeration value="vt_double"></enumeration>
+    		<enumeration value="vt_float"></enumeration>
+    		<enumeration value="vt_string"></enumeration>
+    		<enumeration value="vt_group"></enumeration>
+    	</restriction>
+    </simpleType>
+
+    <element name="root" type="vg:Variable"></element>
+</schema>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vg:root xmlns:vg="http://www.jcyl.es/cs/VariableGroup"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.jcyl.es/cs/VariableGroup VariableGroup.xsd "
+	name="actividad" type="vt_group">
+	<vg:child name="valor" type="vt_int" />
+	<vg:child name="valor" type="vt_string" />
+	<vg:child name="valor" type="vt_group">
+		<vg:child name="valor" type="vt_int" />
+		<vg:child name="valor" type="vt_string" />
+	</vg:child>
+</vg:root>
